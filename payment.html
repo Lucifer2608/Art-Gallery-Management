@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <head>
+        <title>Art Gallery Management</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="header">
+            <img src="images/artgallery-header.png" alt="ART GALLERY MANAGEMENT" width="100%" height="100%">
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="exhibition.php">Exhibition</a></li>
+                <li><a href="artist.html">Artists</a></li>
+                <li><a href="art_object.html">Art</a></li>
+                <li style="float: right"><a href="payment.html">$</a></li>
+              </ul>
+        </div>
+        <div class="payment_form">
+            <form name="payment" action="payment.php">
+                Payment ID:<input type="number" name="p_id" required><br>
+                Customer ID:<input type="number" name="c_id" required><br>
+                Name:<input type="text" name="name" required><br>
+                Contact:<input type="number" name="contact" required><br>
+                Address:<input type="text" name="addr" required><br>
+                Art ID:<input type="number" name="art_id" required><br>
+                Amount:<input type="number" name="amount" required><br>
+                <input type="submit" value="Payment">
+            </form>
+            <form name="customer" action="customer.php">
+                <input type="submit" value="Show All Customer">
+            </form>
+        </div>
+        <div  id="footer">
+            <p>Copyright © <a href="dbmsproj.rf.gd">dbmsproj.rf.gd</a> All Rights Reserved</p>
+        </div>
+    </body>
+</html>

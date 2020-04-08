@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Art Gallery Management
+    </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+        <div id="header">
+                <img src="images/artgallery-header.png" alt="ART GALLERY MANAGEMENT" width="100%" height="100%">
+            </div>
+            <div id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="exhibition.php">Exhibition</a></li>
+                    <li><a href="artist.html">Artists</a></li>
+                    <li><a href="art_object.html">Art</a></li>
+                    <li style="float: right"><a href="payment.html">$</a></li>
+                  </ul>
+            </div>
+    <div class="search">
+        <form name="form" id="search_form" action="art_search.php" method="GET">
+            Art ID:<input type="number" name="art_id"><br>
+            <!--Artist name:<input type="text" name="name"><br>-->
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div class="add">
+        <form name="form" action="art_add.php" method="POST">
+            Art ID:<input type="number" name="art_id" required><br>
+            Art Title:<input type="text" name="title" required><br>
+            Artist:<input type="number" name="artist_id" required><br>
+            Date:<input type="date" name="date" required><br>
+            <input type="submit" value="Add">
+        </form>
+    </div>
+    <div class="update">
+        <form name="form" action="art_update.php" method="POST">
+            Art ID:<input type="number" name="art_id" required><br>
+            Art Title:<input type="text" name="title" required><br>
+            Artist:<input type="number" name="artist_id" required><br>
+            Date:<input type="date" name="date" required><br>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+    <div class="delete">
+        <form name="form" action="art_delete.php" method="POST" onsubmit="return sure()">
+            Art ID:<input type="number" name="art_id" required><br>
+            <input type="submit" value="Delete">
+            <script>
+                function sure()
+                {
+                   return confirm("Are you sure?");
+                }
+            </script>
+        </form>
+    </div>
+    <div  id="footer">
+        <p>Copyright © <a href="dbmsproj.rf.gd">dbmsproj.rf.gd</a> All Rights Reserved</p>
+    </div>
+</body>
